@@ -1,0 +1,47 @@
+.box {
+  clear: both;
+  padding: 0;
+  min-height: 300px;
+  height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+table {
+  &.freezeFirstColumn {
+    tbody,
+    thead {
+      tr {
+        display: block;
+        width: -webkit-min-content;
+        width: -moz-min-content;
+        width: min-content;
+      }
+    }
+    tbody,
+    thead {
+      td,
+      th {
+        background-color: #fff;
+        padding: 10px;
+        &:first-child {
+          position: sticky;
+          position: -webkit-sticky;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+tbody {
+  td {
+    a {
+      padding: 5px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

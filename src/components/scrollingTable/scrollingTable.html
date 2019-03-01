@@ -1,0 +1,33 @@
+<vue-scrolling-table
+							:scroll-horizontal="scrollHorizontal"
+							:scroll-vertical="scrollVertical"
+							:include-footer="includeFooter"
+							:dead-area-color="deadAreaColor"
+							:class="{ freezeFirstColumn:freezeFirstColumn }">
+							<template slot="thead">
+								<tr>
+									<th v-for="col in columns" 
+									:key="col.id">{{ col.title }}</th>
+								</tr>
+							</template>
+							<template slot="tbody">
+								<tr v-for="item in items" :key="item.id">
+                  <template v-if="col.id !=='Proposal file'" v-for="col in columns">
+                      <td :key="col.id">{{ item[col.id] }}</td>
+                  </template>
+                  <template v-else>
+                      <td :key="col.id">
+                        <template v-for="file in item[col.id]">
+                          <a :href="file"><img src="../../assets/file-ic.png"></a>
+                        </template>
+                       
+                        
+                      </td>
+                  </template>
+									
+								</tr>
+							</template>
+							<template slot="tfoot">
+								<tr><th :colspan="columns.length">My footer text</th></tr>
+							</template>
+						</vue-scrolling-table>
