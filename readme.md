@@ -1,4 +1,4 @@
-# Trivago Assessment
+# VUE Examples
 
 ### Installation
 
