@@ -5,7 +5,7 @@
 Download/clone the project and follow the below steps
 
 ```sh
-$ cd trivagoassessment
+$ cd sticky-table-and-high-chart
 $ npm install
 $ npm run serve
 ```
